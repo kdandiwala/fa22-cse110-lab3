@@ -7,11 +7,8 @@ assignees: kdandiwala
 
 ---
 
-**Feature Details**
-What is the problem you're trying to solve or new idea that you want to add?
+**Feature Details**: What is the problem you're trying to solve or new idea that you want to add?
 
-**Solution**
-How would the feature work?
+**Solution**: How would the feature work?
 
-**Additional Comments**
-Any other thoughts relevant to the feature?
+**Additional Comments**: Any other thoughts relevant to the feature?
