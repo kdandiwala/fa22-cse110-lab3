@@ -4,22 +4,26 @@
     <title>Meeting Minutes</title>
     <meta name="author" content="Krish Dandiwala">
     <link rel="icon" type="image/x-icon" href="/screenshots/clock.jpeg">
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <header>
-        <h1>Project Brainstorm</h1>
-        <h2>October 7, 2022</h2>
+    <header class="sticky">
         <nav>
-            <a href="#attendance">Attendance</a> |
-            <a href="#agenda">Meeting Agenda</a> |
-            <a href="#ideas">Project Ideas</a> |
-            <a href="#a/v">Meeting Audio/Video</a>
+            <div class="menu">
+                <ul>
+                    <li><a href="#a/v">Meeting Audio/Video</a></li>
+                    <li><a href="#ideas">Project Ideas</a></li>
+                    <li><a href="#agenda">Meeting Agenda</a></li>
+                    <li><a href="#attendance">Attendance</a></li>
+                    <li id="title"><a><b>Meeting Minutes</b></a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <hr>
     <main>
-        <section>
-            <h3 id="attendance">Attendance</h3>
+        <section class="attendance">
+            <div id="attendance_content">
+                <h3 id="attendance">Attendance</h3>
             <p>CSE110 <strong>Group 8</strong> Attendance Summary</p>
             <p><b>Team Manager</b>: <i>Priyanka Bhatia</i></p>
             <p><b>Team Leads</b>: <i>Krish Dandiwala</i>, <i>Brian Mendez</i></p>
@@ -43,118 +47,121 @@
                     <li>Shengqiu Jin</li>
                 </ul>
             </details>
+            </div>
         </section>
-        <hr>
-        <section>
-            <h3 id="agenda">Meeting Agenda</h3>
-            <ol>
-                <li>Unfinished business - <em>N/A</em></li>
-                <li>Introductions to new teammates</li>
-                <li>Ice-breaker games</li>
-                <li>Standardize time and place for subsequent meetings</li>
-                <li>Brainstorm new project ideas</li>
-              </ol>
-            <form>
-                <fieldset>
-                    <legend><b>Request a new topic</b></legend>
-                    <label for="fname_topic">First name:</label>
-                    <input type="text" id="fname_topic" name="fname_topic"><br><br>
-                    <label for="lname_topic">Last name:</label>
-                    <input type="text" id="lname_topic" name="lname_topic"><br><br>
-                    <label for="date">Today's Date:</label>
-                    <input type="date" id="date" name="date"><br><br>
-                    <label for="topics">Topic</label><br>
-                    <textarea id="topics" name="topics" rows="4" cols="50">Write your topic suggestions here.
-                    </textarea> 
-                    <br>
-                    <button type="button">Submit</button>
-                </fieldset>
-              </form>
+        <section class="agenda">
+            <div id="agenda_content">
+                <h3 id="agenda">Meeting Agenda</h3>
+                <ol>
+                    <li>Unfinished business - <em>N/A</em></li>
+                    <li>Introductions to new teammates</li>
+                    <li>Ice-breaker games</li>
+                    <li>Standardize time and place for subsequent meetings</li>
+                    <li>Brainstorm new project ideas</li>
+                  </ol>
+                <form>
+                    <fieldset>
+                        <legend><b>Request a new topic</b></legend>
+                        <label for="fname_topic">First name:</label>
+                        <input type="text" id="fname_topic" name="fname_topic"><br><br>
+                        <label for="lname_topic">Last name:</label>
+                        <input type="text" id="lname_topic" name="lname_topic"><br><br>
+                        <label for="date">Today's Date:</label>
+                        <input type="date" id="date" name="date"><br><br>
+                        <label for="topics">Topic</label><br>
+                        <textarea id="topics" name="topics" rows="4" cols="50">Write your topic suggestions here.
+                        </textarea> 
+                        <br>
+                        <button type="button">Submit</button>
+                    </fieldset>
+                  </form>
+            </section>
+            </div>
+        <section class="ideas">
+            <div id="ideas_content">
+                <h3 id="ideas">Project Ideas</h3>
+                <ul>
+                    <li>Pomodoro Timer</li>
+                    <li>Automated Chatbot</li>
+                    <li>Fitness Tracker</li>
+                    <li>Note-Taking/Personal Diary</li>
+                    <li>Social Media Manager</li>
+                </ul>
+                <br>
+                <img src="screenshots/scheme.jpeg" alt="web-app diagram" width="614" height="366">
+                <br><br>
+                <form>
+                    <fieldset>
+                        <legend><b>Tech Stack and Roles Questionnaire</b></legend>
+                        
+                        <label for="fname_survey">First name:</label>
+                        <input type="text" id="fname_survey" name="fname_survey"><br><br>
+                        <label for="lname_survey">Last name:</label>
+                        <input type="text" id="lname_survey" name="lname_survey"><br><br>
+                        
+                        <label for="year">What year are you?</label>
+                        <select id="year">
+                            <option value="one">First year</option>
+                            <option value="two">Second year</option>
+                            <option value="three">Third year</option>
+                            <option value="four">Fourth year</option>
+                        </select> <br> <br>
+
+                        <label for="major">What's your major?</label>
+                        <input list="majors" name="major" id="major">
+                        <datalist id="majors">
+                            <option value="Computer Science">
+                            <option value="Computer Engineering">
+                            <option value="Math-CS">
+                            <option value="Bioinformatics">
+                            <option value="Cognitive Science">
+                        </datalist>
+
+                        <p>What technologies should we use?</p>
+                        <input type="checkbox" id="React" name="React">
+                        <label for="React">React</label><br>
+                        <input type="checkbox" id="aws" name="aws">
+                        <label for="aws">AWS</label><br>
+                        <input type="checkbox" id="Firebase" name="Firebase">
+                        <label for="Firebase">Firebase</label><br>
+                        <input type="checkbox" id="VanillaJS" name="VanillaJS">
+                        <label for="VanillaJS">VanillaJS</label><br>
+                        <input type="checkbox" id="github" name="github">
+                        <label for="github">Github</label><br>
+                        <input type="checkbox" id="other" name="other">
+                        <label for="other">Other</label><br><br>
+                        <textarea id="others" name="others" rows="4" cols="50">If you chose other, write your tech-stack suggestions here.
+                        </textarea><br>
+
+                        <p>What role do you prefer to play?</p>
+                        <input type="radio" id="programmer" name="programmer">
+                        <label for="programmer">Programmer</label><br>
+                        <input type="radio" id="qa" name="qa">
+                        <label for="qa">QA tester</label><br>
+                        <input type="radio" id="document" name="document">
+                        <label for="document">Documentation Writer</label><br>
+                        <input type="radio" id="graphic" name="graphic">
+                        <label for="graphic">Graphic Designer</label><br><br>
+                        <button type="button">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
         </section>
-        <hr>
-        <section>
-            <h3 id="ideas">Project Ideas</h3>
-            <ul>
-                <li>Pomodoro Timer</li>
-                <li>Automated Chatbot</li>
-                <li>Fitness Tracker</li>
-                <li>Note-Taking/Personal Diary</li>
-                <li>Social Media Manager</li>
-            </ul>
-            <br>
-            <img src="screenshots/scheme.jpeg" alt="web-app diagram" width="614" height="366">
-            <br><br>
-            <form>
-                <fieldset>
-                    <legend><b>Tech Stack and Roles Questionnaire</b></legend>
-                    
-                    <label for="fname_survey">First name:</label>
-                    <input type="text" id="fname_survey" name="fname_survey"><br><br>
-                    <label for="lname_survey">Last name:</label>
-                    <input type="text" id="lname_survey" name="lname_survey"><br><br>
-                    
-                    <label for="year">What year are you?</label>
-                    <select id="year">
-                        <option value="one">First year</option>
-                        <option value="two">Second year</option>
-                        <option value="three">Third year</option>
-                        <option value="four">Fourth year</option>
-                    </select> <br> <br>
-
-                    <label for="major">What's your major?</label>
-                    <input list="majors" name="major" id="major">
-                    <datalist id="majors">
-                        <option value="Computer Science">
-                        <option value="Computer Engineering">
-                        <option value="Math-CS">
-                        <option value="Bioinformatics">
-                        <option value="Cognitive Science">
-                    </datalist>
-
-                    <p>What technologies should we use?</p>
-                    <input type="checkbox" id="React" name="React">
-                    <label for="React">React</label><br>
-                    <input type="checkbox" id="aws" name="aws">
-                    <label for="aws">AWS</label><br>
-                    <input type="checkbox" id="Firebase" name="Firebase">
-                    <label for="Firebase">Firebase</label><br>
-                    <input type="checkbox" id="VanillaJS" name="VanillaJS">
-                    <label for="VanillaJS">VanillaJS</label><br>
-                    <input type="checkbox" id="github" name="github">
-                    <label for="github">Github</label><br>
-                    <input type="checkbox" id="other" name="other">
-                    <label for="other">Other</label><br><br>
-                    <textarea id="others" name="others" rows="4" cols="50">If you chose other, write your tech-stack suggestions here.
-                    </textarea><br>
-
-                    <p>What role do you prefer to play?</p>
-                    <input type="radio" id="programmer" name="programmer">
-                    <label for="programmer">Programmer</label><br>
-                    <input type="radio" id="qa" name="qa">
-                    <label for="qa">QA tester</label><br>
-                    <input type="radio" id="document" name="document">
-                    <label for="document">Documentation Writer</label><br>
-                    <input type="radio" id="graphic" name="graphic">
-                    <label for="graphic">Graphic Designer</label><br><br>
-                    <button type="button">Submit</button>
-                </fieldset>
-            </form>
-        </section>
-        <hr>
-        <section>
-            <h3 id="a/v">Meeting Audio/Video</h3>
-            <audio controls>
-                <source src="screenshots/minutes_audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </audio>
-            <br>
-            <video width="640" height="360" controls>
-                <source src="screenshots/minutes.mp4" type="video/mp4">
-                Your browser does not support this video.
-            </video>
+        <section class="av">
+            <div id="av_content">
+                <h3 id="a/v">Meeting Audio/Video</h3>
+                <audio controls>
+                    <source src="screenshots/minutes_audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <br>
+                <video width="640" height="360" controls class="video">
+                    <source src="screenshots/minutes.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+            </div>
         </section>
     </main>
-    <hr>
     <footer>
         <div>
             <p>Sample meeting minutes by <span>Krish Dandiwala</span></p>
