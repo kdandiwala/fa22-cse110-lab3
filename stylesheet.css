@@ -1,15 +1,15 @@
+/* navbar */
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: white;
-    border-radius: 15px;
-    opacity: 1;
-    
+    border-radius: 0.5cm;
+    opacity: 95%;   
   }
   
-  .menu li {        
+  .menu ul > li {        
     float: right;
   }
 
@@ -21,11 +21,10 @@
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 4mm 16px;
     text-decoration: none;
   }
-  
-  /* Change the link color to #111 (black) on hover */
+
   .menu li a:hover {
     background-color: lightgray;
   }
@@ -37,26 +36,116 @@
     z-index: 100;
   }
 
-  .attendance, .agenda, .ideas, .av {
+  /* content containers */
+  .attendance, .agenda, .ideas, .av, .image {
+    position: relative;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 40px;
     margin-bottom: 40px;
-    backdrop-filter: blur(10px);
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(3px) saturate(100%) contrast(45%) brightness(130%);    
+    border-width: 1px;
+    border-color: #fff;
     border-radius: 15px;
+    border-style: solid;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     
   }
 
 #attendance_content, #agenda_content, #ideas_content, #av_content {
-    padding-top: 1em;
+    padding-top: 0.5em;
     padding-left: 2em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     padding-right: 2em;
 }
 
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(222,222,255,1) 0%, rgba(0,212,255,1) 100%);
-    color: black
+/* header styling */
+h3 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
 }
+
+#agenda_content {
+    padding: 2em 2em 2em 2em;
+    display: flex;
+    flex-grow: 1;   
+    column-gap: 4ch;
+}
+
+img ~ p {
+    color: grey;
+    padding-left: 50px;
+    display: inline-block;
+}
+
+img + p {
+    font-weight: bold;
+}
+
+/* auto scroll to section */
+.anchor {
+    position: absolute;
+    transform: translateY(-10vh);
+  }
+
+img{
+    border-radius: 15px;
+    height: auto;
+    width: 90%;
+    margin: 10px 10% 10px 3%
+    
+}
+
+.grid_container {
+    display: grid;
+    row-gap: 5px;
+    justify-content: center;
+}
+
+
+          
+* {
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(screenshots/Lato/25090817022.ttf);
+}
+
+a:active {
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+p[title] {
+    color: navy
+}
+
+@media screen and (max-width: 200px) {
+    p[title] {
+        color: white
+    }
+}
+
+h3.header_attendance {
+    font-style: normal;
+}
+
+body {
+    font-family: myFirstFont;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,130,130,1) 0%, rgba(126,181,255,1) 100%);
+    color: rgb(62, 62, 62)
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer {
+    margin: auto
+}
+
