@@ -11,55 +11,56 @@
         <nav>
             <div class="menu">
                 <ul>
-                    <li><a href="#a/v">Meeting Audio/Video</a></li>
+                    <li><a href="#av">Meeting Audio/Video</a></li>
                     <li><a href="#ideas">Project Ideas</a></li>
                     <li><a href="#agenda">Meeting Agenda</a></li>
                     <li><a href="#attendance">Attendance</a></li>
-                    <li id="title"><a><b>Meeting Minutes</b></a></li>
+                    <li id="title"><a style="color:navy;"><b>Meeting Minutes - October 16th, 2022</b></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <section class="attendance">
+            <span class="anchor" id="attendance"></span>
             <div id="attendance_content">
-                <h3 id="attendance">Attendance</h3>
-            <p>CSE110 <strong>Group 8</strong> Attendance Summary</p>
-            <p><b>Team Manager</b>: <i>Priyanka Bhatia</i></p>
-            <p><b>Team Leads</b>: <i>Krish Dandiwala</i>, <i>Brian Mendez</i></p>
-            <details>
-                <summary>Present</summary>
-                <ul>
-                    <li>Krish Dandiwala</li>
-                    <li>Brian Mendez</li>
-                    <li>Maggie Liu</li>
-                    <li>Nikhil Dange</li>
-                    <li>Demi Mao</li>
-                </ul>
-            </details>
-            <details>
-                <summary>Absent</summary>
-                <ul>
-                    <li>Alex Perez</li>
-                    <li>Jinwoong Huh</li>
-                    <li>Takuro Kitazawa</li>
-                    <li>Rishigesh Jayananth</li>
-                    <li>Shengqiu Jin</li>
-                </ul>
-            </details>
+                <h3 class="header_attendance">Attendance</h3>
+                <p title="manager"><b>Team Manager</b>: <i>Priyanka Bhatia</i></p>
+                <p title="leads"><b>Team Leads</b>: <i>Krish Dandiwala</i>, <i>Brian Mendez</i></p>
+                <details>
+                    <summary>Present</summary>
+                    <ul>
+                        <li>Krish Dandiwala</li>
+                        <li>Brian Mendez</li>
+                        <li>Maggie Liu</li>
+                        <li>Nikhil Dange</li>
+                        <li>Demi Mao</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Absent</summary>
+                    <ul>
+                        <li>Alex Perez</li>
+                        <li>Jinwoong Huh</li>
+                        <li>Takuro Kitazawa</li>
+                        <li>Rishigesh Jayananth</li>
+                        <li>Shengqiu Jin</li>
+                    </ul>
+                </details>
             </div>
         </section>
         <section class="agenda">
+            <span class="anchor" id="agenda"></span>
             <div id="agenda_content">
-                <h3 id="agenda">Meeting Agenda</h3>
-                <ol>
+                <h3>Meeting Agenda</h3>
+                <ol id = "agenda_list">
                     <li>Unfinished business - <em>N/A</em></li>
                     <li>Introductions to new teammates</li>
                     <li>Ice-breaker games</li>
                     <li>Standardize time and place for subsequent meetings</li>
                     <li>Brainstorm new project ideas</li>
                   </ol>
-                <form>
+                <form id="agenda_form">
                     <fieldset>
                         <legend><b>Request a new topic</b></legend>
                         <label for="fname_topic">First name:</label>
@@ -78,8 +79,9 @@
             </section>
             </div>
         <section class="ideas">
+            <span class="anchor" id="ideas"></span>
             <div id="ideas_content">
-                <h3 id="ideas">Project Ideas</h3>
+                <h3>Project Ideas</h3>
                 <ul>
                     <li>Pomodoro Timer</li>
                     <li>Automated Chatbot</li>
@@ -87,9 +89,6 @@
                     <li>Note-Taking/Personal Diary</li>
                     <li>Social Media Manager</li>
                 </ul>
-                <br>
-                <img src="screenshots/scheme.jpeg" alt="web-app diagram" width="614" height="366">
-                <br><br>
                 <form>
                     <fieldset>
                         <legend><b>Tech Stack and Roles Questionnaire</b></legend>
@@ -147,18 +146,30 @@
                 </form>
             </div>
         </section>
+        <div class="image">
+            <img src="screenshots/scheme.png" alt="web-app diagram">
+            <p>Sample Meeting Diagram</p>
+        </div>
         <section class="av">
-            <div id="av_content">
-                <h3 id="a/v">Meeting Audio/Video</h3>
-                <audio controls>
+            <span class="anchor" id="av"></span>
+            <div id="av_content" class="grid_container">
+                <h3>Meeting Audio/Video</h3>
+                <audio controls class="audio">
                     <source src="screenshots/minutes_audio.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                 </audio>
                 <br>
-                <video width="640" height="360" controls class="video">
+                <video width="640" height="360" controls>
                     <source src="screenshots/minutes.mp4" type="video/mp4">
                     Your browser does not support this video.
                 </video>
+                <style>
+                    video{
+                        border-radius: 15px;
+                        max-width: fit-content;
+                        max-height: fit-content;
+                    }
+                </style>
             </div>
         </section>
     </main>
